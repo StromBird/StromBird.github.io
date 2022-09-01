@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<title>Zoo</title>
+</head>
+<style>
+*
+{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body
+{
+background-image: url(Image/bg4.jpg);
+-webkit-background-size:cover;
+background-position:center center;
+height:100vh;
+}
+
+h1
+{
+  position: absolute;
+  display: block;
+  font-size: 45px;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 520px;
+  margin-right: auto;
+  color:#F4AF1B; 
+  font-weight: bold;
+  font-style: italic;
+  border-radius: 7px;
+  padding: 2px;
+  border: 1px solid black;
+  width:32%;
+  background-color:#00154F;
+  box-shadow:1px 4px 12px rgba(27,31,34,0.85);
+}
+
+h2
+{
+  position:absolute;
+  display:block;
+  font-family: Showcard Gothic;
+  font-size:37px;
+  margin-top: 230px;
+  margin-bottom: 0.67em;
+  margin-left: 780px;
+  margin-right: auto;
+  color:#FFE77AFF; 
+  font-weight: bold;
+}
+
+
+.nav
+{
+	
+	position:absolute;
+width:1350px;
+display: block;
+  font-size: 2em;
+  margin-top: 110px;
+  margin-bottom: 0.67em;
+  margin-left: 200px;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.nav ul
+{
+list-style:none;
+margin-top:2%;
+}
+
+.nav ul li
+{
+	
+	background:rgba(27,31,34,0.85);
+	width:190px;
+	border:1px solid #fff;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	float: left;
+	color: #fff;
+	font-size: 14px;
+	position: relative;
+	font-family: poppins;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor:pointer;
+}
+
+.nav ul li:hover
+{
+background: #F2AA4cFF;
+}
+
+.nav ul ul
+{
+display:none;
+}
+
+.nav ul li:hover > ul
+{
+display:block;
+}
+
+.nav ul li a
+{
+text-decoration:none;
+color:#fff;
+}
+
+.nav .fa
+{
+margin-right:8px;
+}
+.sign .fa
+{
+margin-right:8px;
+}
+
+#btn1
+{
+position: absolute;
+display: block;
+text-transform:uppercase;
+background: linear-gradient(to bottom,#666 1%, #003 100%);
+border-radius:40px;
+cursor:pointer;
+border:1px solid #5e97d1;
+color:#fff;
+margin-left:1250px;
+margin-right: auto;
+margin-top:50px;
+padding:12px 20px;
+font-size:17px;
+font-weight:700;
+text-decoration:none;
+box-shadow:1px 4px 12px rgba(94,28,68,15);
+text-shadow:0 1px 0 #528ecc;
+}
+
+.slider {
+	display:block;
+    position:absolute;
+    width: 36%;
+    overflow: hidden;
+	margin-top: 300px;
+  margin-bottom: 0.67em;
+  margin-left: 765px;
+  margin-right: auto;
+}
+.images {
+    display: flex;
+    width: 100%;
+	border: 5px solid #f;
+}
+.images img {
+    height: 350px;
+    width: 100%;
+    transition: all 0.15s ease;
+	border: 7px solid #E4E6EB;
+	border-radius:6px;
+}
+.images input {
+    display: none;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.dots label {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid #FFD55A 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+.dots label:hover {background: #FF0000;}
+#img1:checked ~ .m1 {
+    margin-left: 0;
+}
+#img2:checked ~ .m2 {
+    margin-left: -100%;
+}
+#img3:checked ~ .m3 {
+    margin-left: -200%;
+}
+#img4:checked ~ .m4 {
+    margin-left: -300%;
+}
+
+#img5:checked ~ .m5 {
+    margin-left: -400%;
+}
+
+#img6:checked ~ .m6 {
+    margin-left: -500%;
+}
+
+.social-menu ul {
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+	
+}
+.social-menu ul li {
+    list-style: none;
+    margin: 20px 29px;
+}
+.social-menu ul li .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.social-menu ul li .fa:hover {
+    color: #ffffff;
+}
+.social-menu ul li a {
+    position:absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+	
+}
+.social-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #1877F2;
+}
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #1DA1F2;
+}
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #1DA1F2;
+}
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #E4405F;
+}
+.social-menu ul li:nth-child(5) a:hover {
+    background-color: #CD201F;
+}
+
+footer
+{
+position:absolute;
+color:#FFF;
+margin-top:670px;
+margin-left:150px;
+font-size:20px;
+}
+
+
+.content 
+{
+position: absolute;
+top: 53%;
+left: 23%;
+transform: translate(-50%, -50%);
+width: 400px;
+height: 350px;
+background: rgba(0.20, 0.20, 0.20, 0.5);
+border-radius:6px;
+}
+.content h3
+{
+position:relative;
+color:#66fcf1;
+text-align:center;
+font-family:Snap ITC;
+font-size:26px;
+margin-top:13px;
+}
+
+.content p
+{
+color:#FFF;
+font-family:chiller;
+font-size:30px;
+position:relative;
+margin-top:10px;
+text-align:center;
+}
+
+</style>
+
+<body>
+
+
+
+<div class="S">
+<h1>National Zoological Park</h1>
+
+<div class="nav">
+
+<ul>
+<li><a href="#"><i class="fa fa-home"></i>home</li>
+<li><a href="Map.html"><i class="fa fa-map-o"></i>Map</li>
+<li><a href="#"><i class="fa fa-shopping-cart"></i>Plan your visit
+		<ul>
+        <li><a href="Things to do.html">Things to do</li>
+        <li><a href="Tickets.html">Tickets</li>
+        <li><a href="Membership.html">Membership</li>
+        </ul>
+        </li>
+<li><a href="Gallary.html"><i class="fa fa-picture-o"></i>Gallery</li>
+<li><a href="About us.html"><i class="fa fa-users"></i>about us</li>
+<li><a href="Contact us.html"><i class="fa fa-phone-square"></i>Contact Us</li>
+</ul>
+</div>
+
+
+
+</div><!--container-->
+
+<h2>plan the trip of a liftime</h2>
+<div class="slider">
+        <div class="images">
+            <input type="radio" name="slide" id="img1" checked>
+            <input type="radio" name="slide" id="img2">
+            <input type="radio" name="slide" id="img3">
+            <input type="radio" name="slide" id="img4">
+            <input type="radio" name="slide" id="img5">
+            <input type="radio" name="slide" id="img6">
+
+            <img src="Image/zoo5.jpg" class="m1" alt="img1">
+            <img src="Image/zoo2.jpg" class="m2" alt="img2">
+            <img src="Image/zoo3.jpg" class="m3" alt="img3">
+            <img src="Image/zoo1.jpg" class="m4" alt="img4">
+            <img src="Image/zoo4.jpg" class="m5" alt="img5">
+            <img src="Image/zoo.jpg" class="m6" alt="img6">
+        </div>
+        <div class="dots">
+            <label for="img1"></label>
+            <label for="img2"></label>
+            <label for="img3"></label>
+            <label for="img4"></label>
+            <label for="img5"></label>
+            <label for="img6"></label>
+        </div>
+    </div><!--slider-->
+
+<div class="social-menu">
+  
+  <ul>
+    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+    <li><a href=""><i class="fa fa-instagram"></i></a></li>
+    <li><a href=""><i class="fa fa-youtube"></i></a></li>
+  </ul>
+</div>
+
+<footer>&copy; Copyright 2021 National Zoological Park</footer>
+
+<div class="content">
+<h3>Discover your Wild Side</h3>
+<p>National Zoological Park is home to 2000 Animals of 200 different species includes giant panda, It covers 70 hectares with habitats for lions, bald eagles, poisonous frogs, Asian elephants.It attracts 1 Million visitors annually and and is the most-visited attraction in the region.</p>
+</div>
+
+
+<button onClick="btnClicked()" class="sign" id="btn1"><i class="fa fa-user-plus"></i>Sign up</button>
+<script>
+function btnClicked(){
+	document.location.href="SignUp.html";
+	
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+
+<style>
+body
+{
+background-color:#3AAFA9;
+}
+
+.container
+{
+	
+	position:absolute;
+	top:0;
+    left:30%;
+	padding: 20px;
+    background: #FFF;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    width: 600px;
+    min-height: 400px;
+    margin: 20px 0;
+	border:4px solid #000;
+	border-radius:5px;
+	display: grid;
+}
+
+label
+{
+position:relative;
+margin-top:12px;
+}
+
+.container input[type=text]
+{
+width:350px;
+height:40px;
+border-radius:3px;
+margin-bottom:10px;
+}
+
+.container input[type=email]
+{
+width:350px;
+height:40px;
+border-radius:3px;
+margin-bottom:10px;
+}
+
+.container textarea
+{
+border-radius:3px;
+}
+
+.container button
+{
+	position:relative;
+width:100px;
+height:40px;
+border-radius:25px;
+margin-top:20px;
+background-color:#3AAFA9;
+color:#fff;
+cursor:pointer;
+
+}
+
+.fa
+{
+margin-right:6px;
+}
+
+.contact i
+{
+font-size:25px;
+}
+
+
+</style>
+<body>
+
+<div class="container">
+<h1>Feedback</h1>
+<label>Name</label>
+<input type="text" id="name"placeholder="Enter you Name" required>
+
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter yout Email" required>
+
+<label>Comment</label>
+<textarea id="comment" rows="5" cols="50" placeholder="Enter your Comment" required></textarea>
+
+<button onclick="alert('Thank you for your Feedback')" >Submit</button>
+
+<div class="contact">
+<i class="fa fa-map-marker"></i><label>Address</label>
+<p>National Zoological Park, Colombo 15, Sri Lanka</p>
+
+<i class="fa fa-phone"></i><label>Phone</label>
+<p>Hotline: 432 423 343</p>
+
+<i class="fa fa-envelope"></i><label>Mail</label>
+<p>ZoologicalPark@gmail.com</p>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html><head>
+<title>Signup</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<style>
+*
+{
+box-sizing:border-box;
+}
+
+body
+{
+
+font-family:'Open Sans',sans-serif;
+display:flex;
+align-items:center;
+justify-content:center;
+min-height:100vh;
+margin:0;
+background-image: url(Image/bg3.jpg);
+-webkit-background-size:cover;
+background-position:center center;
+height:100vh;
+}
+
+.container
+{
+background-color:#fff;
+border-radius:5px;
+box-shadow::0 2px 5px  rgba(0,0,0,0.3);
+overflow:hidden;
+width:450px;
+height:690px;
+max-width:100%;
+border: 5px solid #666;
+}
+
+.header
+{
+background-color:#f7f7f7;
+border-radius:1px solid #f0f0f0;
+padding:20px 40px;
+
+}
+
+.header .fa
+{
+margin-right:7px;
+}
+
+.header h2 
+{
+margin:0;
+
+}
+
+.form
+{
+padding:30px 40px
+}
+
+.form control
+{
+margin-bottom:10px;
+padding-bottom:20px;
+position:relative;
+}
+
+.form-control label
+{
+display:inline-block;
+margin-top:7px;
+margin-right:14px;
+}
+
+.form-control input[type=radio]
+{
+display:inline-block;
+margin-right:8px;
+
+
+}
+
+.form-control input[type=text]
+{
+border:2px solid #f0f0f0;
+border-radius:4px;
+display:block;
+font-family:'Open Sans',sans-serif;
+font-size:14px;
+padding:5px;
+margin-bottom:15px;
+width:100%;
+}
+
+.form-control input[type=password]
+{
+border:2px solid #f0f0f0;
+border-radius:4px;
+display:block;
+font-family:'Open Sans',sans-serif;
+font-size:14px;
+padding:5px;
+margin-bottom:15px;
+width:100%;
+}
+
+.form-control.success input[type=text]
+{
+border-color:#2ecc71;
+}
+
+.form-control.success input[type=password]
+{
+border-color:#2ecc71;
+}
+
+.form-control.error input[type=text]
+{
+border-color:#e74c3c;
+}
+.form-control.error input[type=password]
+{
+border-color:#e74c3c;
+}
+
+.form-control i
+{
+visibility:hidden;
+position:absolute;
+margin-top:-40px;
+right:600px;
+}
+
+.form-control.success i.fa-check-circle
+{
+color:#2ecc71;
+visibility:visible;
+}
+
+.form-control.error i.fa-exclamation-circle
+{
+color:#e74c3c;
+visibility:visible;
+}
+
+.form-control small
+{
+visibility:hidden;
+position:absolute;
+margin-top:-15px;
+}
+
+
+.form-control.error small
+{
+color:#e74c3c;
+visibility:visible;
+}
+
+.form button
+{
+	position:absolute;
+background-color:#06F;
+border:2px solid #06F;
+border-radius:4px;
+color:#fff;
+display:block;
+font-family:'Open Sans',sans-serif;
+font-size:16px;
+margin-top:10px;
+padding:10px;
+width:23%;
+}
+
+
+</style>
+<body>
+<div class="container">
+   <div class="header">
+	<h2><i class="fa fa-user-plus"></i>Sign Up</h2>
+   </div>
+
+<form id="form" class="form" >
+	  
+      <div class="form-control">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name" id="name"/>
+      <i class="fa fa-check-circle"></i>
+      <i class="fa fa-exclamation-circle"></i>
+      <small>Error Message</small>
+      </div>
+      
+      <div class="form-control">
+      <label>Gender</label>
+      <input  type="radio" name="gender" value="Male" />Male
+      <input  type="radio" name="gender" value="Female" />Female
+      <small>Error Message</small>
+      </div>
+      
+      <div class="form-control">
+      <label>Age</label>
+      <input type="text" placeholder="Enter your age" id="age"/>
+      <i class="fa fa-check-circle"></i>
+      <i class="fa fa-exclamation-circle"></i>
+      <small>Error Message</small>
+      </div>
+      
+      <div class="form-control">
+      <label>Email</label>
+      <input type="text" placeholder="Enter your email" id="email"/>
+      <i class="fa fa-check-circle"></i>
+      <i class="fa fa-exclamation-circle"></i>
+      <small>Error Message</small>
+      </div>
+      
+      <div class="form-control">
+      <label>Username</label>
+      <input type="text" placeholder="Enter username" id="uname"/>
+      <i class="fa fa-check-circle"></i>
+      <i class="fa fa-exclamation-circle"></i>
+      <small>Error Message</small>
+      </div>
+      
+      <div class="form-control">
+      <label>Password</label>
+      <input type="password" placeholder="Enter password" id="pass"/>
+      <i class="fa fa-check-circle"></i>
+      <i class="fa fa-exclamation-circle"></i>
+      <small>Error Message</small>
+      </div>
+      
+      <div class="form-control">
+      <label>Confirm password</label>
+      <input type="password" placeholder="Re-enter password" id="cpass"/>
+      <i class="fa fa-check-circle"></i>
+      <i class="fa fa-exclamation-circle"></i>
+      <small>Error Message</small>
+      
+      </div>
+    
+    
+    
+    <button>Submit</button>
+    
+    
+</form>
+
+</div>
+
+<script>
+
+	const form = document.getElementById('form');	
+	const name = document.getElementById('name');
+	const age = document.getElementById('age');
+	const email = document.getElementById('email');
+	const uname = document.getElementById('uname');
+	const pass = document.getElementById('pass');
+	const cpass = document.getElementById('cpass');
+	
+	form.addEventListener('submit', e => {
+		e.preventDefault();
+		
+		checkInputs();
+		});
+		
+	function checkInputs() {
+		
+		const nameValue = name.value.trim();
+		const ageValue = age.value.trim();
+		const emailValue = email.value.trim();
+		const unameValue = uname.value.trim();
+		const passValue = pass.value.trim();
+		const cpassValue = cpass.value.trim();
+		
+		
+		if(nameValue  === ''){
+			
+			setErrorFor(name, 'Field cannot be empty');
+		} else{
+				
+			setSuccessFor(name);	
+			  }
+	 	 
+		 if(ageValue  === ''){
+			
+			setErrorFor(age, 'Field cannot be empty');
+		} else{
+				
+			setSuccessFor(age);	
+			  }
+		 
+		 if(emailValue  === ''){
+			
+			setErrorFor(email, 'Field cannot be empty');
+		} else{
+				
+			setSuccessFor(email);	
+			  }
+		 
+		 if(unameValue  === ''){
+			
+			setErrorFor(uname, 'Field cannot be empty');
+		} else{
+				
+			setSuccessFor(uname);	
+			  }
+		 
+		 if(unameValue  === ''){
+			
+			setErrorFor(uname, 'Field cannot be empty');
+		} else{
+				
+			setSuccessFor(uname);	
+			  }
+		 
+		 if(passValue  === ''){
+			
+			setErrorFor(pass, 'Field cannot be empty');
+		} else{
+				
+			setSuccessFor(pass);	
+			  }
+			  
+		 if(cpassValue  === ''){
+			
+			setErrorFor(cpass, 'Field cannot be empty');
+		} else if(passValue !== cpassValue ){
+		setErrorFor(cpass, 'Password does not match');
+			}else{
+				
+			setSuccessFor(cpass);
+				alert("Thank You For Signing Up");
+			  }
+		 
+		 
+		 }
+		 
+		 
+		 
+		 
+   function setErrorFor(input, message){
+	   const formControl = input.parentElement;
+	   const small = formControl.querySelector('small');
+	   
+	   small.innerText = message;
+	   
+	   formControl.className = 'form-control error';
+	  
+	   }
+	   
+  function setSuccessFor(input){
+	  
+	  const formControl = input.parentElement;
+	  formControl.className = 'form-control success';
+
+	 
+	   }
+	  
+	  
+	  
+	  
+</script>
+
+</body>
+
+</html>
